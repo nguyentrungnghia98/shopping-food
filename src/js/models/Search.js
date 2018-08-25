@@ -1,5 +1,5 @@
 import axios from "axios";
-import { proxy, key } from "../config/key";
+import { proxy, key } from "../config/config";
 export default class Search {
   constructor(query) {
     this.query = query;
