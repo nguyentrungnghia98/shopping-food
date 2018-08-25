@@ -1,5 +1,5 @@
 import axios from "axios";
-import { proxy, key } from "../config/key";
+import { proxy, key } from "../config/config";
 import { Fraction } from "fractional";
 const formatCount = count => {
   if (count) {
