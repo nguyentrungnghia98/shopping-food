@@ -1,5 +1,5 @@
 import axios from "axios";
-import { proxy, key } from "../config/config";
+import { key } from "../config/config";
 import { Fraction } from "fractional";
 const formatCount = count => {
   if (count) {
@@ -31,15 +31,8 @@ export default class Recipe {
   async getRecipeByID() {
     try {
       const res = await axios(
-        `${proxy}http://food2fork.com/api/get?key=${key}&rId=${this.id}`
+        `http://food2fork.com/api/get?key=${key}&rId=${this.id}`
       );
-      //  this.image_url = res.data.recipe.image_url ;
-      //  this.ingredients = res.data.recipe.ingredients ;
-      //  this.publisher = res.data.recipe.publisher ;
-      //  this.source_url = res.data.recipe.source_url ;
-      //  this.title = res.data.recipe.title ;
-      //  this.calcTime();
-      //  this.calcServings();
       this.data = {
         image_url: res.data.recipe.image_url,
         ingredients: res.data.recipe.ingredients,
