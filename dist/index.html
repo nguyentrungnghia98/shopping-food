@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,7 +15,9 @@
 <body>
     <div class="container">
         <header class="header">
-           <a href = '/'><img src="img/logo.png" alt="Logo" class="header__logo"></a> 
+            <a href='/'>
+                <img src="img/logo.png" alt="Logo" class="header__logo">
+            </a>
             <form class="search">
                 <input type="text" class="search__field" placeholder="Search over 1,000,000 recipes...">
                 <button class="btn search__btn">
@@ -31,7 +34,9 @@
                     </svg>
                 </div>
                 <div class="likes__panel">
-                        <button class= "clear-like-list"><span>Clear All</span> </button>
+                    <button class="clear-like-list">
+                        <span>Clear All</span>
+                    </button>
                     <ul class="likes__list">
                         <!--
                         <li>
@@ -54,11 +59,11 @@
 
         <div class="results">
             <ul class="results__list">
-               
+
             </ul>
 
             <div class="results__pages">
-               
+
             </div>
         </div>
 
@@ -66,7 +71,7 @@
 
         <div class="recipe">
 
-            
+
         </div>
 
 
@@ -74,7 +79,9 @@
 
 
         <div class="shopping">
-                <button class="clear-shopping-list"> <span> Clear All </span> </button>
+            <button class="clear-shopping-list">
+                <span> Clear All </span>
+            </button>
             <h2 class="heading-2">My Shopping List</h2>
 
             <ul class="shopping__list">
@@ -93,31 +100,31 @@
         </div>
     </div>
 
-    <div class = "popup-shopping hidden" >
-    
-        <div class = "popup-content">
-                <button class="modal-popup__close  btn-close"></button>
-            <div style = "width: 50%;">
-            <h1>Do you want to by all of this items?</h1>
-            <ul class="buy-list-item">
-                
-            </ul>
-            <button class="btn-small buy__btn">
-                <svg class="search__icon">
-                    <use href="img/icons.svg#icon-shopping-cart"></use>
-                </svg>
-                <span>Buy now!</span>
-            </button>
-        </div>
+    <div class="popup-shopping hidden">
+
+        <div class="popup-content">
+            <button class="modal-popup__close  btn-close"></button>
+            <div style="width: 50%;">
+                <h1>Do you want to by all of this items?</h1>
+                <ul class="buy-list-item">
+
+                </ul>
+                <button class="btn-small buy__btn">
+                    <svg class="search__icon">
+                        <use href="img/icons.svg#icon-shopping-cart"></use>
+                    </svg>
+                    <span>Buy now!</span>
+                </button>
+            </div>
         </div>
 
     </div>
-    <script type="text/javascript" >
-        function hashChange (id){
-                window.location.hash = '#' + id;
-                return false;
-            };
-        </script>
+    <script type="text/javascript">
+        function hashChange(id) {
+            window.location.hash = '#' + id;
+            return false;
+        };
+    </script>
 <script type="text/javascript" src="js/bundle.js"></script></body>
 
 </html>
